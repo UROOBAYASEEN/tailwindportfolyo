@@ -6,7 +6,26 @@ import { TiThMenu } from "react-icons/ti";
 import { ImCross } from "react-icons/im";
 
 const Header = () => {
-  const values: string[] = ['Home', "About", "Education", "Skill", "Interest", "Contact"];
+
+  interface hero{
+    name:string
+    id:string
+  }
+  const values: hero[] = [{
+    name:'home',id:"home"
+  }, {
+    name:"about",id:"about"
+  }, {
+    name:"projects",id:"projects"
+
+    
+  }, {
+    name:"skill",id:"skill"
+  }, {
+    name:"interest",id:'interest'
+  }, {
+    name:"contact",id:"contact"
+  }];
   const [menu, setMenu] = useState(true);
 
   return (
@@ -17,9 +36,9 @@ const Header = () => {
         
         <div className='hidden md:flex md:gap-5 lg:gap-12'>
           {values.map((val) => (
-              <h1 className='text-white uppercase font-bold hover:text-purple-600' key={val}>
-                {val}
-              </h1>
+            <Link href={val.id} key={val.id}> <h1   className='text-white uppercase tracking-tighter leading-[20px] text-2xl font-light  hover:text-purple-600 hover:border-b-2 border-purple-600 duration-[3] ease-linear' key={val.id}>
+                {val.name}
+              </h1></Link>
           
           
           ))}
@@ -34,10 +53,13 @@ const Header = () => {
               <div className='bg-black text-white h-full fixed left-0 top-0 duration-500 w-1/2'>
                 <div className='py-12 px-12'>
                   {values.map((val) => (
-                    <div key={val} className='py-2'>
-                      <Link href={val === 'Home' ? '/' : `/${val}`} className='font-bold'>
-                        {val}
+                    <div key={val.id} className='py-2'>
+                      <Link href={`#${val.id}`}
+
+                      className='tracking-tighter leading-[20px] text-2xl font-light  hover:bg-purple-900'>
+                        {val.name}
                       </Link>
+                      
                     </div>
                   ))}
                 </div>

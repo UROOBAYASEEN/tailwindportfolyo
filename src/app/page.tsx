@@ -12,17 +12,19 @@ import Footer from './components/Footer'
 const page = () => {
   return (
     <div className='w-screen h-screen'>
+    
+    
+    
+    
+
      <Hero />
-     
-     
+    <About/>
       <Interrest/>
       <Skill/>
-    <About/>
-     
-     
       <Contact/>
     
-    <Footer/>
+ 
+      <Footer/>
     </div>
   )
 }

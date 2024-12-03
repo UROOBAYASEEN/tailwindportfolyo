@@ -7,6 +7,8 @@ import Header from "./components/Header";
 
 
 
+
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -35,7 +37,8 @@ export default function RootLayout({
       >
         <Header/>
         {children}
-        
+       
+       
       </body>
     </html>
   );

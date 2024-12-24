@@ -4,7 +4,8 @@ import About from './components/About'
 import Skill from './components/Skill'
 import Interrest from './components/Interrest'
 import Contact from './components/Contact'
-import Footer from './components/Footer'
+
+
 
 
 
@@ -24,7 +25,7 @@ const page = () => {
       <Contact/>
     
  
-      <Footer/>
+ 
     </div>
   )
 }

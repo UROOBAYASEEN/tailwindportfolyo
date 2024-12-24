@@ -12,7 +12,7 @@ const Header = () => {
     id:string
   }
   const values: hero[] = [{
-    name:'home',id:"home"
+    name:'home',id:"/"
   }, {
     name:"about",id:"about"
   }, {
@@ -32,7 +32,8 @@ const Header = () => {
     <div className='fixed top-0 left-0 right-0 shadow-xl'>
       <div className='bg-black py-4 flex justify-between lg:justify-evenly px-16'>
         
-        <div className='uppercase text-white text-2xl font-bold'>urooba.</div>
+     
+      <div className='uppercase text-white text-2xl font-bold'>urooba.</div>
         
         <div className='hidden md:flex md:gap-5 lg:gap-12'>
           {values.map((val) => (

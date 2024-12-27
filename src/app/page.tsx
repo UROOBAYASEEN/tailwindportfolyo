@@ -12,7 +12,7 @@ import Contact from './components/Contact'
 
 const page = () => {
   return (
-    <div className='w-screen h-screen'>
+    <div className=''>
     
     
     
